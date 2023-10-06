@@ -1,21 +1,28 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import Button from "./components/Button";
 
-const Circle = styled.div`
-  width: 5rem;
-  height: 5rem;
-  background: ${(props) => props.color || "black"};
-  border-radius: 50%;
-  ${(props) =>
-    props.huge &&
-    css`
-      width: 10rem;
-      height: 10rem;
-    `}
+const Father = styled.div`
+  display: flex;
 `;
 
+const BoxOne = styled.div`
+  background-color: teal;
+  width: 100px;
+  height: 100px;
+`;
+const BoxTwo = styled.div`
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+`;
 function App() {
-  return <Circle color="red" huge />;
+  return (
+    <Father>
+      <BoxOne />
+      <BoxTwo />
+    </Father>
+  );
 }
 
 export default App;
